@@ -1,0 +1,72 @@
+Name: Zhiyang Lu
+USC loginid: zhiyangl
+CSCI 455 PA4
+Spring 2015
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+
+Zhiyang Lu
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+Cannot generate the word at the beginning of the article if it is the only one.
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+
+GenText:	Contains the main function that parses the command line, reads the input file, creates 
+			a RandomTextGenerator instance and call functions to generate the random text.
+
+Prefix:		A basic class that represent a prefix. The class contains a String that is the content of
+			a prefix. toString() is override to return the content of an instance. hashCode() and 
+			equals() is override to make sure the HashMap works correctly. getSubPrefix() returns the
+			current prefix exclude the first word for convenience of generating another prefix.
+
+RandomTextGenerator:	Use an ArrayList<String> to store all the words in the input file. 
+						Use a Map<Prefix, ArrayList<String>> to store all the unique prefixes in the
+						input file. A prefix is mapped to an ArrayList<String> that stores all the 
+						successors of this prefix in the input file.
+						When create an instance of this class, all the variable is initialized via 
+						constructor and generatePrefix().
+						When call generateRandomText(int numWords, boolean debug), a String of random
+						generated text that contains numWords words will be returned. If debug is
+						true, debug information will be printed out while generating the text.
+						Other functions are supporting functions for generating random text:
+						getNextPrefix() returns a new prefix based on current prefix and the 
+						generated word.
+						getInitialPrefix() returns a random prefix from all the possible prefixes.
+						SuccessorToString() returns a String that shows all the successors of a 
+						prefix. This is for printing information under debug mode. 
+
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
+
+
+
+
+
+
