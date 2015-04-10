@@ -22,7 +22,7 @@ public class GenText {
 		}else if(args.length == 5 && args[0].equals("-d")){
 			debug = true;
 		}else{
-			System.out.println("Error: missing command-line arguments");
+			System.out.println("Error: missing or too many command-line arguments");
 			usage();
 			System.exit(1);
 		}
@@ -49,7 +49,7 @@ public class GenText {
 	 * a function shows how to run the program with correct command line
 	 */
 	private static void usage(){
-		System.out.println("Command line: java GenText [-d] prefixLength numWords sourceFile outFile");		
+		System.out.println("Run: java GenText [-d] prefixLength numWords sourceFile outFile");		
 	}
 	
 	/**

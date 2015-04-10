@@ -45,14 +45,22 @@ Prefix:		A basic class that represent a prefix. The class contains a String that
 			current prefix exclude the first word for convenience of generating another prefix.
 
 RandomTextGenerator:	Use an ArrayList<String> to store all the words in the input file. 
+						
 						Use a Map<Prefix, ArrayList<String>> to store all the unique prefixes in the
 						input file. A prefix is mapped to an ArrayList<String> that stores all the 
 						successors of this prefix in the input file.
+						
 						When create an instance of this class, all the variable is initialized via 
 						constructor and generatePrefix().
+						
 						When call generateRandomText(int numWords, boolean debug), a String of random
 						generated text that contains numWords words will be returned. If debug is
 						true, debug information will be printed out while generating the text.
+						
+						Random Algorithm: The possible successors (include duplicated) are stored in 
+						an ArrayList mapped to a prefix. Generate a random number based on the size
+						of the ArrayList then get the successor using this number in the ArrayList.
+						
 						Other functions are supporting functions for generating random text:
 						getNextPrefix() returns a new prefix based on current prefix and the 
 						generated word.
