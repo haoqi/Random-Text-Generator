@@ -1,9 +1,20 @@
+// Name:		Zhiyang Lu
+// USC loginid:	zhiyangl
+// CS 455 PA4
+// Spring 2015
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * RandomTextGenerator class
+ * 
+ * A class stores the information of prefix-successors from an article.
+ * Contain function to generate random text.
+ *
+ */
 public class RandomTextGenerator {
 
 	private Map<Prefix, ArrayList<String>> prefix_map;
@@ -12,9 +23,11 @@ public class RandomTextGenerator {
 	private Random rand;
 	
 	/**
+	 * Read from the ArrayList which represents the article and initialize the 
+	 * parameters in the class including the Map from Prefix to successors.
 	 * 
-	 * @param in the scanner that allows the class to read file data
-	 * @param prefixLength the prefix length that will be use in an instance
+	 * @param words : An ArrayList that contains all the words of an article
+	 * @param prefixLength : the prefix length that will be use in an instance
 	 */
 	public RandomTextGenerator(ArrayList<String> words, int prefixLength){
 		prefix_map = new HashMap<Prefix, ArrayList<String>>();
@@ -47,13 +60,7 @@ public class RandomTextGenerator {
 					prefix_map.get(prefix).add(words.get(i + prefixLength));					
 				}
 			}
-		}
-//test
-//		for(Prefix p : prefix_map.keySet()){
-//			System.out.println(p.toString());
-//			System.out.println(prefix_map.get(p));
-//		}
-	
+		}	
 	}
 	
 	

@@ -71,7 +71,7 @@ RandomTextGenerator:	Use an ArrayList<String> to store all the words in the inpu
 
 ----------------------------------------------
 ANY OTHER NOTES FOR THE GRADER:
-
+The first line of the output is used to indicate the column number of the characters
 
 
 

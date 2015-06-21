@@ -1,4 +1,15 @@
+// Name:		Zhiyang Lu
+// USC loginid:	zhiyangl
+// CS 455 PA4
+// Spring 2015
 
+/**
+ * Prefix class
+ * 
+ * a class represents a prefix in an article.
+ * @author Lu
+ *
+ */
 public class Prefix {
 
 	private String prefix;

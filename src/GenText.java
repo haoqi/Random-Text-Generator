@@ -1,4 +1,16 @@
+// Name:		Zhiyang Lu
+// USC loginid:	zhiyangl
+// CS 455 PA4
+// Spring 2015
 
+/**
+ * GenText class
+ * 
+ * main class to read command line and create relevant class to generate random text
+ * 
+ * Run: java GenText [-d] prefixLength numWords sourceFile outFile
+ * 
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -80,12 +92,12 @@ public class GenText {
 	}
 	
 	/**
-	 * 
+	 * Read data from input file and create the RandomTextGenerator instance and generate the text.
 	 * @param prefixLength
 	 * @param numWords
 	 * @param sourceFile
 	 * @param debug
-	 * @return
+	 * @return 
 	 */
 	private static String generate(int prefixLength, int numWords, String sourceFile, boolean debug) {
 		File inputfile;
@@ -117,7 +129,7 @@ public class GenText {
 	}
 	
 	/**
-	 * write context into outputFile with required format.
+	 * write context string into outputFile with required format.
 	 * @param context: String of the whole context
 	 * @param outFile: File to write into
 	 */
@@ -125,14 +137,14 @@ public class GenText {
 		String[] words = context.split("\\s+");
 		try{
 			PrintWriter out = new PrintWriter(outFile);
-			int lineCounter = 0;
 			
-			//for test
 			for(int i = 0; i < 8; i++){
-				out.print("0123456789");
+				out.print("1234567890");
 			}
 			out.println();
+			out.println();
 			
+			int lineCounter = 0;
 			for(int i = 0; i < words.length; i++){
 				if(lineCounter == 0){
 					lineCounter += words[i].length();
